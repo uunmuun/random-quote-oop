@@ -1,13 +1,20 @@
 const express = require("express");
+const cors = require("cors");
 const quotes = require("./data/quotes");
 const app = express();
 const PORT = 3000;
 
 function getRandomQuote() {
-  const randomIdex = Math.floor(Math.random() * quotes.length);
-  const quote = quotes[randomIdex];
-  return quote;
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  return quotes[randomIndex];
 }
+
+const corsOptions = {
+  origin: "*",
+  // origin: ['http://localhost:8080', 'http://127.0.0.1:8080'],
+};
+
+app.use(cors(corsOptions));
 
 app.get("/quotes/random-single", (req, res) => {
   const randomQuote = getRandomQuote();
@@ -15,5 +22,5 @@ app.get("/quotes/random-single", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`);
+  console.log(`Quotes API service is running on port ${PORT}`);
 });
