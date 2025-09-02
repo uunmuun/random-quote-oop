@@ -10,18 +10,22 @@ This project consists of a client-side Vanilla JavaScript app and a server-side 
 1. Navigate to the root directory of the project.
 1. Open new terminal window.
 1. Change directory to the server subfolder:
-   `cd server`
+   ```bash
+   cd server
 1. Install server dependencies by running the following command:
-   `npm install`
+   ```bash
+   npm install
 1. Run server in the development mode with hot reload feature:
-   `npm run dev`
+   ```bash
+   npm run dev
 1. Server will be running at the http://localhost:3000
 
 ### Run client
 
 1. Open new terminal window in the root of the project
 1. Run client in the development mode with hot reload:
-   `npx live-server client`
+   ```bash
+   npx live-server client
 1. Client will be running at the http://localhost:8080
 
 ## Running the App in Production Mode
@@ -31,11 +35,14 @@ This project consists of a client-side Vanilla JavaScript app and a server-side 
 1. Navigate to the root directory of the project.
 1. Open new terminal window.
 1. Change directory to the server subfolder:
-   `cd server`
+   ```bash
+   cd server
 1. Install server dependencies by running the following command:
-   `npm install`
+   ```bash
+   npm install
 1. Run server in the production mode:
-   `npm start`
+   ```bash
+   npm start
 1. Configure hosting server where you run application to forward all requests to the http://localhost:3000
 1. Get assigned by the hosting provider URL for your backend API server.
    For example https://random-quotes-api.com
